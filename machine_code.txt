@@ -1,0 +1,23 @@
+Intermediate Code:
+LC: 200 (AD,24)
+LC: 200 (IS,20) (ST,A) (ST,B)
+LC: 202 (IS,20) (ST,B) (ST,NUM)
+LC: 204 (IS,21) (ST,B) (C,6)
+LC: 206 (IS,26) (ST,NEXT)
+LC: 209 (DC,27) (C,NUM 5)
+LC: 209 (AD,25)
+Declarative Statements:
+LC: 209 Instruction: DC Operand1: NUM 5
+
+Symbol Table:
+
+Machine Code:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Declarative 
+ 
