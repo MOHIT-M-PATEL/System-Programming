@@ -1,0 +1,11 @@
+Intermediate Code:
+LC: 100 (AD,24)
+LC: 100 (IS,20) (R,1) (R,2)
+LC: 102 (IS,21) (R,1) (ST,1)
+LC: 104 (IS,26) (ST,2)
+LC: 107 (DC,27) (ST,1) (C,5)
+LC: 107 (AD,25)
+
+Symbol Table:
+Label: NUM, Index: 1
+Label: NEXT, Index: 2
