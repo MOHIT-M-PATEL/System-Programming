@@ -1,0 +1,39 @@
+MNT:
+ Name=INCREASE, PosParams=4, KeyParams=2, ExpVars=0, MDT Ptr=0, KPDTAB Ptr=0, SST Ptr=0
+ Name=DECREASE, PosParams=6, KeyParams=3, ExpVars=1, MDT Ptr=2, KPDTAB Ptr=2, SST Ptr=2
+ Name=SUM, PosParams=8, KeyParams=3, ExpVars=1, MDT Ptr=6, KPDTAB Ptr=3, SST Ptr=3
+
+MDT:
+LDA (P,1)
+ADD (P,2)
+LCL (E,0) 
+SUB (P,1) (P,2)
+MOV (P,2) (E,1)
+SUB (P,1) (P,2)
+LCL (E,0) 
+ADD (P,1) (E,1)
+
+PNTAB:
+ [VAR1, VAR2, INIT, THRESH]
+ [NUM, DIFF]
+ [OPERAND1, OPERAND2]
+
+KPDTAB:
+ INIT = 20
+ THRESH = 40
+ DIFF = 8
+
+EVNTAB:
+ 
+ TEMP
+ RESULT
+
+SSNTAB:
+ LOAD CALC
+ REPEAT
+ 
+
+SSTAB:
+LOAD: 0
+CALC: 1
+REPEAT: 5
