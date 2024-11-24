@@ -1,0 +1,24 @@
+Intermediate Code with LC (Variant I form):
+500 (AD, 1) (C, 500)
+500 (IS, 4) (R, 1) (L, 0)
+501 (IS, 1) (R, 1) (L, 1)
+502 (AD, 5)
+504 (IS, 3) (R, 2) (L, 2)
+505 (IS, 1) (R, 2) (L, 3)
+506 (AD, 5)
+508 (IS, 4) (R, 1) (L, 4)
+509 (AD, 2)
+
+Pool Table:
+0
+2
+4
+
+Literal Table:
+0 '5' 502
+1 '6' 503
+2 '3' 506
+3 '5' 507
+4 '8' 509
+
+Symbol Table:
