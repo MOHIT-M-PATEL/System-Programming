@@ -1,0 +1,26 @@
+Macro Name Table (MNT):
+SORT_STUDENTS: {'name': 'SORT_STUDENTS', 'pos_params': 2, 'key_params': 0, 'exp_vars': 0, 'mdt_pointer': 0, 'kptab_pointer': 0, 'sstab_pointer': 0}
+SWAP_STUDENTS: {'name': 'SWAP_STUDENTS', 'pos_params': 1, 'key_params': 0, 'exp_vars': 0, 'mdt_pointer': 9, 'kptab_pointer': 0, 'sstab_pointer': 0}
+
+Positional Name Table (PNTAB):
+SORT_STUDENTS: ['&start', '&end']
+SWAP_STUDENTS: ['R1']
+
+Macro Definition Table (MDT):
+0: MOV R1, (P,1)
+1: MOV R2, (P,2)
+2: LOOP:
+3: CMP R1, R2
+4: JGE END_LOOP
+5: SWAP_STUDENTS R1
+6: ADD R1, 1
+7: JMP LOOP
+8: END_LOOP:
+9: MOV R3, [(P,1)]
+10: MOV R4, [(P,1)+1]
+11: CMP R3, R4
+12: JGE CONTINUE
+13: SWAP R3, R4
+14: MOV [(P,1)], R3
+15: MOV [(P,1)+1], R4
+16: CONTINUE:

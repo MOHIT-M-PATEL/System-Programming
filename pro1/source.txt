@@ -1,0 +1,5 @@
+START
+students ds 1 2 3 4 5 6
+grade ds 90 45 69 78 87 56
+SORT_STUDENTS students grade
+END
