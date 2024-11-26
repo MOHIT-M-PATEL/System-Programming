@@ -1,0 +1,11 @@
+START               ; Start of module 1
+ENTRY VAR1  
+DC VAR1 3
+EXTERN VAR2         ; References an external symbol VAR2
+MOV A, 100         ; Address-sensitive instruction
+ADD A, B            ; Address-sensitive instruction
+JMP LOOP            ; Address-sensitive instruction
+MOV C, D            ; Address-sensitive instruction
+ADD A, VAR2         ; Uses the external symbol
+LOOP: SUB B, 10    ; Label with an address-sensitive instruction
+END                 ; End of module 1

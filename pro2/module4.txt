@@ -1,0 +1,12 @@
+START               ; Start of module 4
+ENTRY VAR4          ; Declares VAR4 as a public symbol
+DS VAR4 2           ; Declare VAR4 as a static variable with size 2
+EXTERN VAR3         ; References an external symbol VAR3
+MOV H, 300         ; Address-sensitive instruction
+SUB H, I            ; Address-sensitive instruction
+JZ BEGIN            ; Address-sensitive instruction
+MOV I, VAR3         ; Uses the external symbol
+BEGIN: ADD H, 30   ; Address-sensitive instruction
+CALL FUNC           ; Address-sensitive instruction
+FUNC: RET           ; Return from function
+END                 ; End of module 4

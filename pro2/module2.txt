@@ -1,0 +1,12 @@
+START               ; Start of module 2
+ENTRY VAR2          ; Declares VAR2 as a public symbol
+DS VAR2 1           ; Declare VAR2 as a static variable with size 1
+EXTERN VAR1         ; References an external symbol VAR1
+MOV X, 200         ; Address-sensitive instruction
+ADD X, Y            ; Address-sensitive instruction
+JNZ LOOP            ; Address-sensitive instruction
+MOV Y, VAR1         ; Uses the external symbol
+JMP CHECK           ; Address-sensitive instruction
+CHECK: ADD Y, 20   ; Label with an address-sensitive instruction
+LOOP: DEC Y         ; Address-sensitive instruction in a loop
+END                 ; End of module 2

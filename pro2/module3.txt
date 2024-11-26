@@ -1,0 +1,11 @@
+START               ; Start of module 3
+ENTRY VAR3          ; Declares VAR3 as a public symbol
+DC VAR3 5           ; Declare VAR3 as a constant initialized to 5
+EXTERN VAR1         ; References an external symbol VAR1
+MOV E, VAR3         ; Address-sensitive instruction using a public symbol
+ADD E, 50          ; Address-sensitive instruction
+JMP MAIN            ; Address-sensitive instruction
+MOV F, G            ; Address-sensitive instruction
+SUB G, VAR1         ; Uses the external symbol
+MAIN: INC E         ; Label with an address-sensitive instruction
+END                 ; End of module 3
